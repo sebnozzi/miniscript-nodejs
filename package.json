@@ -1,0 +1,25 @@
+{
+  "name": "miniscript-nodejs",
+  "version": "0.1.0",
+  "description": "A Node.js implementation of MiniScript",
+  "author": "Sebastian Nozzi",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build-server && npm run build-packager",
+    "build-server": "esbuild src/serve.ts --bundle --platform=node --outfile=dist/serve.js",
+    "build-packager": "esbuild src/package.ts --bundle --platform=node --outfile=dist/package.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "esbuild": "0.19.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4"
+  },
+  "dependencies": {
+    "miniscript-ts": "file:../../miniscript.ts"
+  }
+}
