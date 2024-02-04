@@ -7,10 +7,11 @@
   "files": [
     "dist"
   ],
+  "bin": {
+    "miniscript-nodejs": "./dist/run.js"
+  },
   "scripts": {
-    "build": "npm run build-server && npm run build-packager",
-    "build-server": "esbuild src/serve.ts --bundle --platform=node --outfile=dist/serve.js",
-    "build-packager": "esbuild src/package.ts --bundle --platform=node --outfile=dist/package.js"
+    "build": "esbuild src/run.ts --bundle --platform=node --outfile=dist/run.js"
   },
   "devDependencies": {
     "@types/node": "^20.10.4",
@@ -20,6 +21,6 @@
     "vitest": "^1.0.4"
   },
   "dependencies": {
-    "miniscript-ts": "file:../../miniscript.ts"
+    "miniscript-ts": "file:../miniscript.ts"
   }
 }
