@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 
 import { Interpreter } from "miniscript-ts";
+import { ModuleLoader } from "./moduleLoader";
+import { UserInteraction } from "./userInteraction";
 import { argv } from "process";
 import fs from 'fs';
 import path from 'path';
-import { ModuleLoader } from "./moduleLoader";
+
 
 if (argv.length == 3) {
   const srcPath = argv[2];
@@ -18,7 +20,13 @@ if (argv.length == 3) {
   const moduleLoader = new ModuleLoader(interp, localDir);
   moduleLoader.addImportAPI();
 
-  interp.runSrcCode(srcCode);
+  const userInteraction = new UserInteraction(interp);
+  userInteraction.addAPI();
+
+  interp.runSrcCode(srcCode).then((v: boolean) => {
+    userInteraction.stop();
+  });
+
 } else {
   console.info("Please specify source-file!");
 }

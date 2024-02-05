@@ -1,6 +1,6 @@
 {
   "name": "miniscript-nodejs",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "A Node.js implementation of MiniScript",
   "author": "Sebastian Nozzi",
   "license": "MIT",
@@ -15,12 +15,14 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.4",
+    "@types/readline-sync": "^1.4.8",
     "esbuild": "0.19.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
     "vitest": "^1.0.4"
   },
   "dependencies": {
-    "miniscript-ts": "^0.1.2"
+    "miniscript-ts": "^0.1.2",
+    "readline-sync": "^1.4.10"
   }
 }

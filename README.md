@@ -19,10 +19,8 @@ miniscript-nodejs path-to-miniscript-file.ms
 
 ## Supported features
 
-* Module import
-* A subsel of sysdisk/lib
-
-## Not supported
-
+* Core MiniScript
+* `print`
 * `input`
-
+* Module import
+* A subset of sysdisk/lib
