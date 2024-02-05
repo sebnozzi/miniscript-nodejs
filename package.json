@@ -21,6 +21,6 @@
     "vitest": "^1.0.4"
   },
   "dependencies": {
-    "miniscript-ts": "file:../miniscript.ts"
+    "miniscript-ts": "^0.1.0"
   }
 }
