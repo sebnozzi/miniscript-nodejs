@@ -4,6 +4,7 @@
   "description": "A Node.js implementation of MiniScript",
   "author": "Sebastian Nozzi",
   "license": "MIT",
+  "keywords": ["miniscript", "nodejs", "runner", "commandline"],
   "files": [
     "dist"
   ],
