@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import { Interpreter } from "miniscript-ts";
-import { ModuleLoader } from "./moduleLoader";
-import { UserInteraction } from "./userInteraction";
+import { ModuleLoader } from "./api/moduleLoader";
+import { UserInteraction } from "./api/userInteraction";
 import { argv } from "process";
 import fs from 'fs';
 import path from 'path';
