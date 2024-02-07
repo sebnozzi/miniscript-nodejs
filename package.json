@@ -4,7 +4,12 @@
   "description": "A Node.js implementation of MiniScript",
   "author": "Sebastian Nozzi",
   "license": "MIT",
-  "keywords": ["miniscript", "nodejs", "runner", "commandline"],
+  "keywords": [
+    "miniscript",
+    "nodejs",
+    "runner",
+    "commandline"
+  ],
   "files": [
     "dist"
   ],
@@ -23,7 +28,7 @@
     "vitest": "^1.0.4"
   },
   "dependencies": {
-    "miniscript-ts": "^0.1.2",
+    "miniscript-ts": "^0.1.7",
     "readline-sync": "^1.4.10"
   }
 }
